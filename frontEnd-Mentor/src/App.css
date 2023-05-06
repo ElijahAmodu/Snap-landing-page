@@ -1,0 +1,391 @@
+
+
+body{
+    /* padding: 0;
+    margin: 0; */
+    background-color: hsl(0, 0%, 98%);
+}
+
+/* mobile view */
+@media (max-width: 768px) {
+
+    body{
+        padding: 0;
+        margin: 0;
+        background-color: hsl(0, 0%, 98%);
+        color: rgb(113, 122, 130);
+        z-index: 0;
+    }
+
+    .nav-logo{
+        display: flex;
+        justify-content: space-between;
+        margin: 4vh;
+        z-index: 0;
+    }
+
+    .nav-content .nav-logo .snap svg {
+        transform: scale(1.5);
+    }
+
+
+    .listContainerOpen{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(248, 246, 246);
+        height: 100vh;
+        width: 60%;
+        z-index: 2;
+        transition: all .5s ease;
+    }
+
+    .listContainerClose{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(248, 246, 246);
+        height: 100vh;
+        width: 0%;
+        z-index: 2;
+        transition: all .5s ease;
+    }
+
+    .closeMenu{
+        cursor: pointer;
+    }
+
+    .hamburger{
+        cursor: pointer;
+    }
+
+    .listContainer .closeMenu svg{
+        position: fixed;
+        top: 0;
+        right: 0;
+        /* justify-content: end; */
+        margin: 3vh;
+        cursor: pointer;
+    }
+
+    .overlayOpen{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 1;
+        transition: all .4s ease-in-out;
+    }
+
+    .overlayClose{
+        width: 0vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 1;
+        transition: all .4s ease-in-out;
+    }
+
+    .listDiv{
+        margin-top: 10vh;
+        cursor: pointer;
+    }
+
+    .listSvg{
+        display: flex;
+        align-items: center;
+    }
+
+    .listSvg svg{
+        padding-left: 2vw;
+        padding-top: 1vh;
+    }
+
+    .listSvg2{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .listSvg2 svg{
+        padding-left: 2vw;
+        padding-top: 1vh;
+    }
+
+
+    .navButton{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       width: 70%;
+       margin: 0 auto;
+       border-radius: 2px solid black;
+    }
+
+    .navButton button{
+        background-color: rgb(246, 246, 246);
+        color: rgb(113, 122, 130);
+        font-size: 1.5vh;
+        padding-right: 4vw;
+        overflow: hidden;
+    }
+
+    .navButton button:hover {
+        border-color: rgb(171, 169, 169);
+    }
+
+    ul, li {
+        font-size: 2.5vh;
+        list-style: none;
+        padding-top: 1vh;
+    }
+
+    .featureList{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 20%;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .companyList li{
+        margin-bottom: 10px;
+    }
+    
+    .bodyText{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bodyClass .picture img{
+        width: 100%;
+        height: 70vh;
+        /* background-color: blue; */
+    }
+
+    .bodyClass .bodyText .LandingArticleBody h1{
+        text-align: center;
+        color: black;
+      }
+
+    .bodyClass .bodyText .LandingArticleBody p {
+        font-size: 4.5vw;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .bodyClass .bodyText .LandingArticleBody button{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 5vh;
+        background-color: black;
+        color: white;
+        font-size: 4.1vw;
+        border-radius: 3vw;
+      }
+
+      .bodyClass .bodyText .LandingArticleBody button:hover{
+        background-color: rgb(181, 181, 181);
+        color: black;
+      }
+
+    .LandingArticleBody p {
+        display: flex;
+        width: 100%;
+    }
+
+    .footerContent svg {
+        font-size: 10vw;
+        padding-left: 10vw;
+        margin-bottom: 10vw;
+        /* justify-content: space-between; */
+    }
+
+    
+  }
+  
+  /* desktop view */
+  @media only screen and (min-width: 768px) {
+    *{
+        background-color: rgb(245, 245, 248);
+        /* margin: 0;
+        padding: 0; */
+    }
+
+    .hamburger svg{
+        width: 0;
+        height: 0;
+    }
+
+    .closeMenu svg{
+        width: 0;
+        height: 0;
+    }
+
+    .nav-content{
+        display: flex;
+    }
+
+    .bodyText{
+        display: flex;
+        align-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    .nav-content .nav-logo .snap{
+        margin-top: 3vh;
+        margin-left: 1vw;
+    }
+    
+    .nav-content .nav-logo .snap svg {
+        transform: scale(.8);
+    }
+
+    ul, li {
+        /* font-size: 2vh; */
+        list-style: none;
+        /* display: flex; */
+        cursor: pointer;
+    }
+
+    .navUlWrapper{
+        display: flex;
+        gap: 2vw;
+        margin-top: -.5vh;
+    }
+    
+    .navButton{
+        display: flex;
+        margin-left: 75vw;
+        margin-top: -5vh;
+    }
+
+    .navButton button{
+        background-color: rgb(255, 253, 253);
+        color: rgb(113, 122, 130);
+        font-size: 2vh;
+        overflow: hidden;
+        margin-left: 1vw;
+    }
+
+    .navButton button:hover {
+        border-color: rgb(171, 169, 169);
+    }
+
+    .listSvg{
+        display: flex;
+        align-items: center;
+    }
+
+    .listSvg svg{
+        padding-left: 1vw;
+        padding-top: .5vh;
+    }
+
+    .listSvg2{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .listSvg2 svg{
+        padding-left: 1vw;
+        padding-top: .5vh;
+    }
+
+    .featureList{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 10%;
+        row-gap: 5px;
+        column-gap: 1px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        margin-top: 5vh;
+        margin-left: -2vw;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(145, 145, 145, 0.5);
+    }
+
+    .featureList li{
+        margin-left: -1vw;
+    }
+
+
+    .companyList {
+        position: absolute;
+        z-index: 2;
+        width: 5%;
+        margin-top: 5vh;
+        margin-left: -10vw;
+        box-shadow: 0 0 10px rgba(145, 145, 145, 0.5); 
+    }
+
+    article{
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .bodyClass .picture img{
+            width: 100%;
+            height: 40vw;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+    }
+
+    .bodyClass .bodyText .LandingArticleBody p {
+        width: 45%;
+        display: flex;
+        font-size: 1vw;
+        font-weight: 500;
+        justify-content: flex-start;
+        padding: 10px;
+      }
+
+      .bodyClass .bodyText .LandingArticleBody h1{
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        color: black;
+        width: 40%;
+        position: relative;
+        justify-content: flex-start;
+        text-align: left;
+        /* margin-top: -5vh; */
+      }
+
+      .bodyClass .bodyText .LandingArticleBody button{
+        display: block;
+        margin-top: 10vh;
+        background-color: black;
+        color: white;
+        border-radius: 1vw;
+      }
+
+      .bodyClass .bodyText .LandingArticleBody button:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      .footerContent{
+        margin-top: 10vh;
+      }
+
+      .footerContent svg{
+        transform: scale(.8);
+        margin-left: 1.5vh;
+      }
+  }
+
+
